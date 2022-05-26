@@ -8,7 +8,10 @@ public class App {
         System.out.println("-----------main starts-----------");
         ApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
 
-        Customer cust = ctx.getBean("cust", Customer.class);
+        Customer cust = ctx.getBean( Customer.class);
+        cust.setId(99);
+        cust.setCname("Arumugam Brothers");
+        cust.setAddress("Chennai");
         System.out.println(cust);
 
         for(String name: ctx.getBeanDefinitionNames())

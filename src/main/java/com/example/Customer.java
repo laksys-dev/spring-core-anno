@@ -1,5 +1,8 @@
 package com.example;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Customer {
     private int id;
     private String cname, address;
